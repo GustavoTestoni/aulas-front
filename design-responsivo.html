@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Responsivo</title>
+
+    <style>
+        /* Etapa 1: regras de uso COMUM/GERAL */
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        h1 {
+            color: darkred;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        /* Etapa 2:Media Query(consulta de mídia) 
+regras de uso CONDICIONAL/RESPONSIVO */
+
+        @media screen and (min-width: 600px) {
+            body {
+                background-color: lightblue;
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            p {
+                font-size: 26px;
+            }
+
+        }
+
+        @media screen and (min-width: 770px) {
+        .exemplo {
+                background-color: blanchedalmond;
+                width: 80%;
+                margin: auto;
+                padding: 8px;
+                border: solid 1px red;
+
+            }
+
+        }
+
+        @media screen and (min-width: 898px) {
+            .exemplo h1 {
+                text-transform: uppercase;
+                border-width: 40px;
+                border-color: brown;
+                border-style: groove;
+            }
+
+            hr {
+                width: 200px;
+                background-color: darkblue;
+                height: 20px;
+            }
+
+
+            h2 {
+                color: red;
+                text-align: center;
+
+            }
+
+
+
+
+        }
+
+        @media screen and (min-width: 1000px) {
+            .exemplo {
+                max-width: 900px;
+                box-shadow: 36px;
+            }
+
+            b {
+                background-color: blue;
+                color: white;
+                
+            }
+
+            body { background-image:url(imagens/berlin-418.jpg)
+
+            }
+
+
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <div class="exemplo">
+        <h1>Design Responsivo (ou responsividade)</h1>
+        <hr>
+        <p>Conjuntos de técnicas de desenvolvimento front-end
+            visando a construção de sites em que o layout e a
+            experiência geral de uso funcionem bem em
+            dispositivos com tela e tamanho variados.</p>
+
+        <p>Existem duas abordagens</p>
+
+        <h2>Mobile First (é o mais usado)</h2>
+        <p>Foco <b>primeiro em telas pequenas </b>.</p>
+
+        <h2>Desktop First</h2>
+        <p>Foco <b>primeiro em telas grandes</b>.</p>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

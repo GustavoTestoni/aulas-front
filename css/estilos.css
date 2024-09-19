@@ -1,0 +1,195 @@
+/* Regras CSS (Sintaxe)
+seletor { propriedade: valor: } */
+
+/*A regra abaixo para o seletor UNIVERSAL
+aplica uma mudança ao comportamento padrão do Box Model.
+Isso evitará problemas relacionados a width, padding,
+height e border dos elementos, SEMPRE USE em seus projetos.  */
+
+* { box-sizing: border-box;}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(/imagens/oriental-tiles.png);
+}
+
+/* Regra com seletor classe */
+.container {
+    background-color: rgba(255, 255, 255, 0.589);
+    width: 80%;
+    margin: auto;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: red 30px 22px, white -25px -15px;
+}
+
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: rgba(0, 0, 255, 0.315);
+    color: rgb(240, 163, 163);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-transform: uppercase;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    text-shadow: black 15px 15px 30px;
+    font-weight: normal;
+    text-align: center;
+
+
+}
+
+h2 {
+    color: rgb(104, 63, 141);
+    font-size: 28px;
+    border-left-style: solid;
+    border-left-width: 8px;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    padding-left: 15px;
+    margin-left: 10px;
+
+    /* padding-> espaço interno
+margin -> espaço externo */
+
+}
+
+img {
+    max-width: 100%;
+}
+
+p {
+    font-size: 18px;
+    line-height: 24px;
+
+}
+
+/* Regra com seletor CLASSE*/
+.centralizar {
+    text-align: center;
+}
+
+
+.sombra {
+    text-shadow: darkorchid 1px 1px 3px;
+}
+
+.destaque {
+    background-color: brown;
+    color: white;
+    padding: 3px;
+    border-radius: 4px;
+}
+
+
+/* seletor ID */
+#exemplo {
+    color: red;
+    padding: 3px;
+    border: solid 2px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* seletor DESCENDENTE */
+
+p a {
+    background-color: rgb(0, 204, 255);
+}
+
+/* Estilos para os links e menu do site*/
+
+nav a {
+    color: white;
+    background-color: rgb(37, 88, 182);
+    font-weight: bold;
+    width: 50%;
+    display: inline-block;
+    text-align: center;
+
+
+
+    padding: 10px;
+    border: solid 2px black;
+
+    transition: 2s;
+    transform:scale(0.9)
+    opacity: 06s;
+}
+
+
+nav a:hover {
+    background-color: rgb(21, 113, 199);
+    transform: scale(1);
+    opacity: 1;
+}
+
+figure {
+    margin: auto;
+    max-width: 450px;
+    text-align: center;
+    
+
+}
+
+figcaption {
+    font-weight: bold;
+    color: darkred;
+    font-size: 18px;
+    text-align: left;
+}
+/* Seletor descendente */
+
+figure img {
+    filter: grayscale();
+    transition: 2s;
+}
+
+
+
+figure img:hover {
+    filter: none;
+}
+
+ul li {
+    font-size: 18px;
+    list-style-type: square;
+
+}
+
+ul li::marker{
+    content: "-✔";
+
+}
+
+ul li:first-child {
+    color: yellow;
+    font-weight: bold;
+}
+
+ul li:first-child::marker {
+    content:"✌";
+}
+
+ul li:last-child {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: purple;
+}
+
+ul li:nth-child(4){
+    color: blue;
+    font-weight: bold;
+}
+
+ul li:nth-child(4)::marker {
+    content:"🤦‍♀️";
+}
+
+ul li:nth-child(2),
+ul li:nth-child(5),
+ul li:nth-child(9) {
+    font-style: italic;
+}
